@@ -1,6 +1,6 @@
 Instructions here
 
-```
+```bash
 wget http://wrfhydro.donpark.me/donwrfhydro.tar
 
 docker load -i donwrfhydro.tar
