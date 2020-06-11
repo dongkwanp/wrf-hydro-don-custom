@@ -150,7 +150,11 @@ You're done!  The instructions below are for building the docker image from scra
 
 So you want to go through the steps I took eh?  Or this is just for Future Don to try and troubleshoot and remember what he did.  Either way, these are the steps.
 
-I first used the `Dockerfile` I have uploaded into this repository.  
+I first used the `Dockerfile` I have uploaded into this repository.  The `Dockerfile` has been modified from `wrfhydro/dev:base` to have the following:
+
+- Commands to build `wrfhydro/dev:conda` 
+- Enables sudo for `docker` user (previous wrfhydro docker image does not have this)
+- Enables passwordless sudo for `docker` user
 
 Did:
 
@@ -165,3 +169,8 @@ docker save donwrfhydro/dev:latest -o donwrfhydro.tar
 ```
 
 Then I uploaded the docker tarball onto a web server instead of using a docker hub or registry.  
+
+# TODO
+
+1. Automatically install and build WRF-Hydro (Standalone)
+2. Push to Docker Hub(?)
