@@ -69,9 +69,9 @@ I like to make a folder first that WRF-Hydro will live in.  Then I download, ext
 ```bash
 mkdir wrfhydro
 cd wrfhydro
-wget https://github.com/NCAR/wrf_hydro_nwm_public/archive/v5.1.1.tar.gz
-tar -zxvf v5.1.1.tar.gz
-cd wrf_hydro_nwm_public-5.1.1/trunk/NDHMS
+wget https://github.com/NCAR/wrf_hydro_nwm_public/archive/v5.2.0.tar.gz
+tar -zxvf v5.2.0.tar.gz
+cd wrf_hydro_nwm_public-5.2.0/trunk/NDHMS
 ./configure 2
 cp template/setEnvar.sh .
 ```
