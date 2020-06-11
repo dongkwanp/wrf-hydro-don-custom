@@ -7,7 +7,7 @@ some fixes since last time the WRF-Hydro docker images were built.
 
 ## I NEED HELP!
 
-If you need help.  Feel free to contact me (Don) or use this document [https://ral.ucar.edu/sites/default/files/public/projects/Technical%20Description%20%26amp%3B%20User%20Guides/howtobuildrunwrfhydrov511instandalonemode.pdf](https://ral.ucar.edu/sites/default/files/public/projects/Technical%20Description%20%26amp%3B%20User%20Guides/howtobuildrunwrfhydrov511instandalonemode.pdf)
+If you need help.  Feel free to contact me (Don) or use this [PDF document](https://ral.ucar.edu/sites/default/files/public/projects/Technical%20Description%20%26amp%3B%20User%20Guides/howtobuildrunwrfhydrov511instandalonemode.pdf)
 
 Some other useful links are:
 
@@ -174,3 +174,4 @@ Then I uploaded the docker tarball onto a web server instead of using a docker h
 
 1. Automatically install and build WRF-Hydro (Standalone)
 2. Push to Docker Hub(?)
+3. Upgrade to Ubuntu Focal (20.04) due to Ubuntu Xenial (16.04) LTS support ends April 2021
