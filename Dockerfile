@@ -1,11 +1,16 @@
 ###################################
-# Author: James McCreight <jamesmcc -at- ucar.edu>
-# Author: Joe Mills <jmills -at- ucar.edu>
+# Original Author: James McCreight <jamesmcc -at- ucar.edu>
+# Original Author: Joe Mills <jmills -at- ucar.edu>
 # Date:  2018-02-08
 ###################################
+# Fork Modification: Don Park <donpark -at- umass.edu>
+# Date:  2020-06-11
+###################################
+
+
 
 FROM ubuntu:xenial
-MAINTAINER jamesmcc@ucar.edu
+MAINTAINER donpark@umass.edu
 
 ####################################
 ########## ROOT USER  ##############
