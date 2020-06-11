@@ -103,7 +103,6 @@ export NCEP_WCOSS=0
 # Streamflow nudging: 0=Off, 1=On.
 export WRF_HYDRO_NUDGING=0 
 
-export NCEP_WCOSS=0 
 ```
 
 Honestly, you should read the manual a bit further and the code regarding what's going on here, but I went with the default configuration.  
