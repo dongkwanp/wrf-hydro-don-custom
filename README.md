@@ -162,8 +162,8 @@ So you want to go through the steps I took eh?  Or this is just for Future Don t
 I first used the `Dockerfile` I have uploaded into this repository.  The `Dockerfile` has been modified from `wrfhydro/dev:base` to have the following:
 
 - Commands to build `wrfhydro/dev:conda` 
-- Enables sudo for `docker` user (previous wrfhydro docker image does not have this)
-- Enables passwordless sudo for `docker` user
+- Installing sudo as this is not present in base Ubuntu 16.04 docker image (and therefore you can't sudo anything)
+- Enables passwordless sudo for `docker` user as the password is usually automatically generated and not available for the end user
 
 Did:
 
