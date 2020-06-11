@@ -17,13 +17,13 @@ USER root
 ##Additional linux and command-line tools
 #Install add-apt-repository. This needs to be done starting Ubuntu 16.x
 RUN apt-get update \
-        && apt-get install -yq --no-install-recommends \
-        software-properties-common \
-        && apt-get clean \
+	&& apt-get install -yq --no-install-recommends \
+	software-properties-common \
+	&& apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update \
-        && apt-get install -y sudo
+	&& apt-get install -y sudo
 
 #Install additional tools
 RUN add-apt-repository ppa:ubuntu-elisp/ppa \
@@ -44,13 +44,13 @@ RUN apt-get update \
     wget \
     bzip2 \
     ca-certificates \
-    vim \
+    vim \ 
     libhdf5-dev \
     gfortran \
     g++ \
     valgrind \
     m4 \
-    make \
+    make \ 
     libswitch-perl \
     git \
     nano \
@@ -86,6 +86,7 @@ RUN MPICH_VERSION="3.2" \
 ENV H5DIR=/usr/lib/x86_64-linux-gnu/hdf5/serial
 ENV HDF5_DIR=/usr/lib/x86_64-linux-gnu/hdf5/serial
 
+
 RUN NETCDF_C_VERSION="4.4.1.1" \
     && wget ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-${NETCDF_C_VERSION}.tar.gz -P /tmp \
     && tar -xf /tmp/netcdf-${NETCDF_C_VERSION}.tar.gz -C /tmp \
@@ -116,8 +117,7 @@ ENV NCDIR=/usr/local
 ENV NETCDF_LIB=/usr/local/lib
 ENV NETCDF_INC=/usr/local/include
 
-
-## just to be sure
+## just to be sure 
 RUN rm -rf /tmp/*
 
 ###################################
@@ -131,7 +131,7 @@ RUN chmod -R 777 /home/docker/
 RUN wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh \
     && bash Miniconda3-latest-Linux-x86_64.sh -b -p /home/docker/miniconda3 \
     && rm Miniconda3-latest-Linux-x86_64.sh \
-    && chown -R docker:docker /home/docker/miniconda3
+    && chown -R docker:docker /home/docker/miniconda3 
 
 #Set environment variables
 ENV PATH="/home/docker/miniconda3/bin:${PATH}"
@@ -143,10 +143,10 @@ RUN conda update conda
 RUN add-apt-repository ppa:remik-ziemlinski/nccmp && \
         apt-get update && \
         apt-get install -yq --no-install-recommends \
-        nco \
-        nccmp \
-        && rm -rf /var/lib/apt/lists/* \
-        && rm -rf /tmp/*
+	nco \
+	nccmp \
+	&& rm -rf /var/lib/apt/lists/* \
+	&& rm -rf /tmp/*
 
 #Install modules
 RUN conda install -c conda-forge -y jupyterlab cartopy rasterio netcdf4 dask f90nml deepdiff \
@@ -154,7 +154,7 @@ xarray plotnine boltons jupyter_contrib_nbextensions termcolor
 RUN pip install pytest pytest-datadir-ng pytest-html wrfhydropy
 
 RUN     sed -i /etc/sudoers -re 's/^%sudo.*/%sudo ALL=(ALL:ALL) NOPASSWD: ALL/g' && \
-    sed -i /etc/sudoers -re 's/^root.*/root ALL=(ALL:ALL) NOPASSWD: ALL/g'
+    sed -i /etc/sudoers -re 's/^root.*/root ALL=(ALL:ALL) NOPASSWD: ALL/g' 
 
 
 ####################################
