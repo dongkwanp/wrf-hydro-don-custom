@@ -76,7 +76,16 @@ cd wrf_hydro_nwm_public-5.1.1/trunk/NDHMS
 cp template/setEnvar.sh .
 ```
 
-Now this is the part where you need to have some manual configuration before building WRF-Hydro.  You need to edit `setEnvar.sh` file based on what you need.  The PDF document I linked above about building WRF-Hydro for Standalone run suggests the following configuration:
+Now this is the part where you need to have some manual configuration before building WRF-Hydro.  You need to edit the `setEnvar.sh` file based on what you need.  The PDF document I linked above about building WRF-Hydro for Standalone run suggests the configuration I've pasted below.  
+
+Basically, I run one of the following:
+
+```bash
+nano setEnvar.sh
+vi setEnvar.sh
+```
+
+Within the document, you can set your configuration any way you want.  Here is an example:
 
 ```bash
 #!/bin/bash
@@ -105,7 +114,7 @@ export WRF_HYDRO_NUDGING=0
 
 ```
 
-Honestly, you should read the manual a bit further and the code regarding what's going on here, but I went with the default configuration.  
+Honestly, you should read the manual a bit further and the code regarding what's going on here, but I went with the default configuration.  You can close the file using either CTRL+X (for Nano editor) or :wq! (for Vi Editor)
 
 ## Building
 
