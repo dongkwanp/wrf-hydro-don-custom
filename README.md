@@ -184,3 +184,4 @@ Then I uploaded the docker tarball onto a web server instead of using a docker h
 1. Automatically install and build WRF-Hydro (Standalone)
 2. Push to Docker Hub(?)
 3. Upgrade to Ubuntu Focal (20.04) due to Ubuntu Xenial (16.04) LTS support ends April 2021
+4. Fix the container registry that comes built-in with GitLab.  Projects.cloudwaterlab.com's Container Registry is not working properly right now!!!
