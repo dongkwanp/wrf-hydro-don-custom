@@ -1,13 +1,13 @@
 # What is this?
 
-Basically, WRF-Hydro's docker containers (in my opinion) are a bit messed up and 
+In 2020, I was asked to help a colleague install WRF-Hydro.  I think WRF-Hydro's docker containers were a bit messed up and 
 needed some fixing.  The final docker image that I've built here is equivalent 
 to `wrfhydro/dev:conda` except some modifications from my own end that included 
 some fixes since last time the WRF-Hydro docker images were built.  
 
 ## I NEED HELP!
 
-If you need help.  Feel free to contact me (Don) or use this [PDF document](https://ral.ucar.edu/sites/default/files/public/projects/Technical%20Description%20%26amp%3B%20User%20Guides/howtobuildrunwrfhydrov511instandalonemode.pdf)
+If you need help.  Feel free to contact me or use this [PDF document](https://ral.ucar.edu/sites/default/files/public/projects/Technical%20Description%20%26amp%3B%20User%20Guides/howtobuildrunwrfhydrov511instandalonemode.pdf)
 
 Some other useful links are:
 
@@ -20,13 +20,11 @@ Some other useful links are:
 
 ## Download the Docker Image
 
-Download the most updated docker image here: [http://donpark.me/donwrfhydro.tar](http://donpark.me/donwrfhydro.tar) [3.66 GB]
+Previously there was a docker image (not pushed to Docker Hub) hosted on one of my webservers.  
 
-Or if you're on linux, you can download using `wget`. 
+Since then it's been removed.  Please compile manually from here or use the wrf-hydro base docker file.  
 
-```bash
-wget http://donpark.me/donwrfhydro.tar
-```
+Another point to note is that this doesn't fully work still.  I still need to modify it to use Intel compilers (gcc works but... doesn't...).  I've ported it to Github for personal documentation/storage purposes.  Use at your own risk.  
 
 ## Loading Docker Image
 
@@ -157,7 +155,7 @@ You're done!  The instructions below are for building the docker image from scra
 
 # Building WRF-Hydro Docker Image from Scratch
 
-So you want to go through the steps I took eh?  Or this is just for Future Don to try and troubleshoot and remember what he did.  Either way, these are the steps.
+These are the steps.
 
 I first used the `Dockerfile` I have uploaded into this repository.  The `Dockerfile` has been modified from `wrfhydro/dev:base` to have the following:
 
@@ -184,4 +182,5 @@ Then I uploaded the docker tarball onto a web server instead of using a docker h
 1. Automatically install and build WRF-Hydro (Standalone)
 2. Push to Docker Hub(?)
 3. Upgrade to Ubuntu Focal (20.04) due to Ubuntu Xenial (16.04) LTS support ends April 2021
-4. Fix the container registry that comes built-in with GitLab.  Projects.cloudwaterlab.com's Container Registry is not working properly right now!!!
+4. Fix the container registry that comes built-in with GitLab.  
+5. Fix with Intel compiler
