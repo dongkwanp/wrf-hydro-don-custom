@@ -7,7 +7,7 @@ some fixes.  This has been uploaded to Github simply for personal documentation 
 
 ## I NEED HELP!
 
-If you need help.  Feel free to contact me or use this [PDF document](https://ral.ucar.edu/sites/default/files/public/projects/Technical%20Description%20%26amp%3B%20User%20Guides/howtobuildrunwrfhydrov511instandalonemode.pdf)
+Use this [PDF document](https://ral.ucar.edu/sites/default/files/public/projects/Technical%20Description%20%26amp%3B%20User%20Guides/howtobuildrunwrfhydrov511instandalonemode.pdf)
 
 Some other useful links are:
 
