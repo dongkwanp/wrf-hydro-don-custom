@@ -1,9 +1,9 @@
 # What is this?
 
-In 2020, I was asked to help a colleague install WRF-Hydro.  I think WRF-Hydro's docker containers were a bit messed up and 
-needed some fixing.  The final docker image that I've built here is equivalent 
+In 2020, I was asked to help a colleague install WRF-Hydro.  The dockerfile at the time wasn't operating as expected.  
+The final docker image that I've built here is equivalent 
 to `wrfhydro/dev:conda` except some modifications from my own end that included 
-some fixes since last time the WRF-Hydro docker images were built.  
+some fixes.  This has been uploaded to Github simply for personal documentation reasons.  Use at your own risk.  
 
 ## I NEED HELP!
 
